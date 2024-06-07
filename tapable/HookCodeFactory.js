@@ -20,7 +20,7 @@ class HookCodeFactory {
 
   header() {
     let code = '';
-    code += `var _x = this._x;`;
+    code += `var _x = this._x;\n`;
     return code;
   }
 
