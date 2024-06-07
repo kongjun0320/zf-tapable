@@ -12,8 +12,6 @@ class SyncHookCodeFactory extends HookCodeFactory {
 const factory = new SyncHookCodeFactory();
 
 class SyncHook extends Hook {
-  constructor() {}
-
   compile(options) {
     // 通过代码工厂，创建函数
     // 初始化工厂

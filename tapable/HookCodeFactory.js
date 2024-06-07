@@ -35,6 +35,7 @@ class HookCodeFactory {
       default:
         break;
     }
+    return fn;
   }
 
   callTapsSeries() {
@@ -51,11 +52,11 @@ class HookCodeFactory {
 
   callTap(tapIndex) {
     let code = '';
-    code += `var _fn${tapIndex} = _x[${tapIndex}]\n`;
+    code += `var _fn${tapIndex} = _x[${tapIndex}]; \n`;
     let tapInfo = this.options.taps[tapIndex];
     switch (tapInfo.type) {
       case 'sync':
-        code += ` _fn${tapIndex}(${this.args()})`;
+        code += ` _fn${tapIndex}(${this.args()});`;
         break;
 
       default:
